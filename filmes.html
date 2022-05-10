@@ -22,7 +22,7 @@
 
 						jsonFilmes = xmlToJson(domFilmes)
 
-						console.log(jsonFilmes)
+						//console.log(jsonFilmes)
 						
 						for(let i in jsonFilmes['filmes']['filme']) {
 							let item = (jsonFilmes['filmes']['filme'][i])
@@ -64,7 +64,7 @@
 							p4.innerHTML = '<strong>Elenco:</strong> ' + elenco
 
 							let p5 = document.createElement('p')
-							p5.innerHTML = 'Data de lançamento:</strong> Data lançamento do fílme'
+							p5.innerHTML = 'Data de lançamento:</strong> ' + item.dataLancamento['#text'] + ' (' + item.dataLancamento['@attributes']['pais'] + ')'
 
 							let hr = document.createElement('hr')
 
